@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+
+    nlp_api:
+        container_name: nlp_api
+        build:
+            context: .
+            dockerfile: Dockerfile.python
+        volumes:
+            - '.:/code'
+        ports:
+            - 8000:8000
+    
+    react_app:
+        container_name: react_app
+        build:
+            context: .
+            dockerfile: Dockerfile.react
+        volumes:
+            - '.:/app'
+            - '/app/node_modules'
+        ports:
+            - 3000:3000
