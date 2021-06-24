@@ -5,7 +5,7 @@ export default class Keywords extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            keywords: ""
+            keywords: "",
         };
     }
     handleSubmit = (e) => {

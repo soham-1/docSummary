@@ -1,10 +1,47 @@
 # document summarizer [![Build](https://github.com/soham-1/docSummary/actions/workflows/build.yml/badge.svg)](https://github.com/soham-1/docSummary/actions/workflows/build.yml)
-A react app to get summary, topics, keywords of text with help of gensim library.
+A react app to get summary, keywords of text with help of gensim library. Additionally NER(named entity recognition) is implemented with different libraries and pre-trained models.
 
-## Getting Started with Create React App
+## clone this repository
+```sh
+git clone https://github.com/soham-1/docSummary.git
+cd docSummary
+```
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Run on docker
+### Initial build
+this might take several minutes!
+```sh
+docker-compose up -d --build
+docker-compose exec react_app npm install axios
+```
+### Stop the containers using
+```sh
+docker-compose stop
+```
+### Start again using
+```sh
+docker-compose start
+```
 
+## Run locally
+### Install dependencies
+```sh
+npm install
+npm install axios
+```
+### Start react server
+```sh
+npm start
+```
+### Start fastapi server
+```sh
+uvicorn nlp_api.app:app --host 0.0.0.0 --port 8000 --reload
+```
+
+## API endpoints
+> GET
+* ```/summary/{text}```
+* ```/keywords/{text}```
 ## Available Scripts
 
 In the project directory, you can run:
@@ -41,33 +78,3 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
