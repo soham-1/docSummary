@@ -3,7 +3,8 @@ import { BrowserRouter as Router,
       Route } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar';
-import TextForm from './components/TextForm';
+import Keywords from './components/Keywords';
+import Summary from './components/Summary';
 
 function App() {
   return (
@@ -12,12 +13,12 @@ function App() {
           <Navbar title="Document Summarizer"/>
           <Switch>
             <Route exact path="/">
-              <TextForm />
+              <Summary />
             </Route>
-            {/* <Route path="/users">
-              <Users />
+            <Route exact path="/keywords">
+              <Keywords />
             </Route>
-            <Route path="/">
+            {/* <Route path="/">
               <Home />
             </Route> */}
           </Switch>

@@ -12,14 +12,14 @@ const Navbar = (props) => {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li className="nav-item">
-                            <Link className="nav-link active" aria-current="page" to="#">Summarizer</Link>
+                        <li className="nav-item" >
+                            <Link className="nav-link active" aria-current="page" to="/">Summarizer</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="#">LDA</Link>
+                            <Link className="nav-link active" to="keywords">keywords</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="#">BERT</Link>
+                            <Link className="nav-link active" to="#">BERT</Link>
                         </li>
                         {/* <li className="nav-item dropdown">
                             <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
