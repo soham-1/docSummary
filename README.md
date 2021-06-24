@@ -1,4 +1,7 @@
-# Getting Started with Create React App
+# document summarizer [![Build](https://github.com/soham-1/docSummary/actions/workflows/build.yml/badge.svg)](https://github.com/soham-1/docSummary/actions/workflows/build.yml)
+A react app to get summary, topics, keywords of text with help of gensim library.
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
