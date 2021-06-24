@@ -47,8 +47,10 @@ def summary(text:str) -> str:
     summarized_content += summarization.summarize(text, ratio=0.7)
     return summarized_content
 
-def get_keywords(text:str) -> str:
-    return summarization.keywords(text)
+def summ_keywords(text:str) -> str:
+    keywords = summarization.keywords(text)
+    if keywords == "": return "text content is too less to detect any keywords."
+    return keywords
 
 content1 = """
 Microsoft held talks in the past few weeks to acquire software developer platform GitHub, Business Insider reports. One person familiar with the discussions between the companies told CNBC that they had been considering a joint marketing partnership valued around 

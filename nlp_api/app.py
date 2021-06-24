@@ -1,10 +1,9 @@
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
 from fastapi.encoders import jsonable_encoder
-
 from fastapi.middleware.cors import CORSMiddleware
 
-from .pysummarize import summary
+from .pysummarize import summary, summ_keywords
 
 app = FastAPI()
 
@@ -29,4 +28,9 @@ async def index() -> str:
 @app.get("/summary/{text}")
 def get_text(text : str):
     response = jsonable_encoder(summary(text))
+    return JSONResponse(content = response)
+
+@app.get("/keywords/{text}")
+def get_keywords(text : str):
+    response = jsonable_encoder(summ_keywords(text))
     return JSONResponse(content = response)
