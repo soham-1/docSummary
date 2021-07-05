@@ -1,5 +1,5 @@
 # document summarizer [![Build](https://github.com/soham-1/docSummary/actions/workflows/build.yml/badge.svg)](https://github.com/soham-1/docSummary/actions/workflows/build.yml)
-A react app to get summary, keywords of text with help of gensim library. Additionally NER(named entity recognition) is implemented with different libraries and pre-trained models.
+A react app to get summary, keywords of text with help of gensim library. Additionally NER(named entity recognition) is implemented with spacy.
 
 ## clone this repository
 ```sh
@@ -44,6 +44,12 @@ uvicorn nlp_api.app:app --host 0.0.0.0 --port 8000 --reload
 * ```/keywords/{text}```
 * ```/Ner/{text}```
 
+## Screenshots
+<p>
+ <img src="/screenshots/ner.PNG" alt="summary output" />
+<img src="/screenshots/summary.PNG" alt="summary output" />
+<img src="/screenshots/keywords.PNG" alt="summary output" />
+</p>
 ## Available Scripts
 
 In the project directory, you can run:
