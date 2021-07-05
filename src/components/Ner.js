@@ -9,15 +9,6 @@ export default class Ner extends Component {
             Ner_output: "",
         };
     }
-    // marked.setOptions({
-    //     gfm: true,
-    //     tables: true,
-    //     breaks: false,
-    //     pedantic: false,
-    //     sanitize: true,
-    //     smartLists: true,
-    //     smartypants: false
-    // });
     handleSubmit = (e) => {
         e.preventDefault();
         let formdata = new FormData(document.getElementById("Ner"));

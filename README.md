@@ -42,6 +42,8 @@ uvicorn nlp_api.app:app --host 0.0.0.0 --port 8000 --reload
 > GET
 * ```/summary/{text}```
 * ```/keywords/{text}```
+* ```/Ner/{text}```
+
 ## Available Scripts
 
 In the project directory, you can run:
