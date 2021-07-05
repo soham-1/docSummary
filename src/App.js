@@ -5,6 +5,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Keywords from './components/Keywords';
 import Summary from './components/Summary';
+import Ner from './components/Ner';
 
 function App() {
   return (
@@ -18,9 +19,9 @@ function App() {
             <Route exact path="/keywords">
               <Keywords />
             </Route>
-            {/* <Route path="/">
-              <Home />
-            </Route> */}
+            <Route path="/NER">
+              <Ner />
+            </Route>
           </Switch>
       </div>
     </Router>
