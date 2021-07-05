@@ -46,10 +46,11 @@ uvicorn nlp_api.app:app --host 0.0.0.0 --port 8000 --reload
 
 ## Screenshots
 <p>
- <img src="/screenshots/ner.PNG" alt="summary output" />
+<img src="/screenshots/ner.PNG" alt="ner output" />
 <img src="/screenshots/summary.PNG" alt="summary output" />
-<img src="/screenshots/keywords.PNG" alt="summary output" />
+<img src="/screenshots/keywords.PNG" alt="keywords output" />
 </p>
+
 ## Available Scripts
 
 In the project directory, you can run:
