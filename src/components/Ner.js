@@ -25,7 +25,7 @@ export default class Ner extends Component {
                     <div className="form-floating mt-3 ms-5 d-inline-block h-100" style={{width: "30%"}}>
                         <form onSubmit={this.handleSubmit} id="Ner">
                             <textarea className="form-control" name="content" placeholder="Enter text here" id="doc" style={{height: "500px"}}></textarea>
-                            <button className="btn btn-primary mt-2" type="submit">Get keywords</button>
+                            <button className="btn btn-primary mt-2" type="submit">Get Entities</button>
                         </form>
                     </div>
                 <div className="form-floating ms-auto mt-3 me-5 d-inline-block h-100" style={{width: "30%"}}>
